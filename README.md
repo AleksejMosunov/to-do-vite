@@ -4,19 +4,7 @@
 
 🚀 Tech Stack
 
-React
-
-TypeScript
-
-Vite
-
-JavaScript
-
-React Hooks
-
-LocalStorage
-
-CSS / SCSS
+React, TypeScript, Vite, JavaScript, React Hooks, LocalStorage, CSS / SCSS
 
 🎯 Features
 
