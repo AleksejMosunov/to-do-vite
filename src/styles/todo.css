@@ -1,0 +1,8 @@
+.todo-item{
+  background-color: aqua;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
