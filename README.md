@@ -3,29 +3,48 @@
 📝 To Do # React + TypeScript + Vite
 
 🚀 Tech Stack
+
 React
+
 TypeScript
+
 Vite
+
 JavaScript
+
 React Hooks
+
 LocalStorage
+
 CSS / SCSS
 
 🎯 Features
+
 ➕ Add new tasks
+
 ✏️ Edit tasks (in procces)
+
 ✅ Mark tasks as completed
+
 ❌ Delete tasks
+
 🔎 Filter tasks (All / Active / Completed) (in procces)
+
 💾 Persistent state with LocalStorage
+
 ⚡ Fast development environment powered by Vite
+
 🧩 Modular and scalable component structure
 
 
 🎓 Learning Goals
+
 Improve understanding of React architecture
+
 Practice TypeScript in real UI scenarios
+
 Learn how to structure scalable frontend applications
+
 Work with persistent client-side storage
 
 ______________________________________________________________________________________________________________________________________
