@@ -1,4 +1,38 @@
-# React + TypeScript + Vite
+
+
+📝 To Do # React + TypeScript + Vite
+
+🚀 Tech Stack
+React
+TypeScript
+Vite
+JavaScript
+React Hooks
+LocalStorage
+CSS / SCSS
+
+🎯 Features
+➕ Add new tasks
+✏️ Edit tasks (in procces)
+✅ Mark tasks as completed
+❌ Delete tasks
+🔎 Filter tasks (All / Active / Completed) (in procces)
+💾 Persistent state with LocalStorage
+⚡ Fast development environment powered by Vite
+🧩 Modular and scalable component structure
+
+
+🎓 Learning Goals
+Improve understanding of React architecture
+Practice TypeScript in real UI scenarios
+Learn how to structure scalable frontend applications
+Work with persistent client-side storage
+
+______________________________________________________________________________________________________________________________________
+
+to-do-vite is a modern Single Page Application (SPA) for task management built with React and TypeScript using Vite as a build tool.
+
+The project was created for learning purposes to practice component architecture, state management, hooks, and clean TypeScript typing in a real-world frontend setup.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -71,4 +105,3 @@ export default defineConfig([
   },
 ])
 ```
-# to-do-vite
