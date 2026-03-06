@@ -1,7 +1,7 @@
 .todo-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .todo-wrapper{
@@ -10,4 +10,29 @@
   padding: 1rem;
 }
 
+.todo-list-archive {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 1rem;
+}
 
+
+/* На экранах меньше 900px — 2 колонки */
+@media (max-width: 900px) {
+  .todo-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+   .todo-list-archive {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* На экранах меньше 600px — 1 колонка */
+@media (max-width: 600px) {
+  .todo-list {
+    grid-template-columns: 1fr;
+  }
+   .todo-list-archive {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

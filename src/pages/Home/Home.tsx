@@ -44,13 +44,14 @@ export const Home = () => {
       </div>
 
       {/* Right Side */}
-      <div className="todo-list">
+      <div className="todo-list-home">
         <h1>My Last Added 3 ToDo</h1>
 
         <TodoList
           todos={todos}
           toggle={toggleTodo}
           remove={deleteTodo}
+          limit={3}
         />
       </div>
 

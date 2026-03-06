@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div className='footer'>
       <span>© 2026 ToDo App. All rights reserved.</span>
-      <a href="https://www.example.com" target="_blank" >Git Hub</a>
+      <a href="https://github.com/AleksejMosunov/to-do-vite" target="_blank" >Git Hub</a>
     </div>
   );
 }

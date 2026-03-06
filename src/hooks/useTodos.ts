@@ -3,7 +3,8 @@ import type { Todo } from "../models/todo.model";
 
 export const useTodos = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
-  const API_URL = "http://localhost:3000/todos";
+
+  const API_URL = import.meta.env.VITE_BACK_URL + "/todos";
 
   const token = localStorage.getItem("token");
 

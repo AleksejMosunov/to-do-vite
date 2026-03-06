@@ -3,7 +3,7 @@
   border-radius: 1rem;
   border: 0;
   min-height: 3rem;
-  min-width: 15rem
+  /* min-width: 15rem */
 }
 
 .add-input-description{
@@ -11,7 +11,7 @@
   border-radius: 1rem;
   border: 0;
   min-height: 6rem;
-  min-width: 15rem;
+  /* min-width: 15rem; */
 }
 
 .add-todo-btn{
@@ -20,7 +20,7 @@
   background-color: #007bff;
   color: white;
   cursor: pointer;
-  min-width: 20rem;
+  /* min-width: 20rem; */
 }
 
 .add-todo-btn:hover{
@@ -30,7 +30,6 @@
 
 
 .home-container {
-  max-width: 600px;
   margin: 0 auto; /* центрирует */
   flex-wrap: wrap;
   display: flex;
@@ -39,15 +38,18 @@
 }
 
 .add-todo {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: center;
+}
+
+
+.todo-list-home{
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 30px;
-}
-
-.todo-list {
-  flex: 1;
-  padding: 30px;
-  flex-direction: column;
+  width: 100%
 }
