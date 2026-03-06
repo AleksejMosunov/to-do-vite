@@ -7,20 +7,39 @@ import Login from './pages/Login/Login';
 import About from './pages/About/About';
 import Register from './pages/Register/Register';
 import Profile from './pages/Profile/Profile';
+import { AuthProvider } from './components/context/AuthContext';
+import { ProtectedRoute } from './components/common/ProtectedRoute';
 
 function App() {
 
+
   return (
-    <Routes>
-      <Route element={<MainLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path="*" element={<h1>404 Not Found</h1>} />
-      </Route>
-    </Routes>
+    <AuthProvider>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
+          <Route path='/login' element={<Login />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/register' element={<Register />} />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="*" element={<h1>404 Not Found</h1>} />
+        </Route>
+      </Routes>
+    </AuthProvider>
   );
 }
 
