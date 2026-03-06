@@ -1,0 +1,13 @@
+.todo-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.todo-wrapper{
+  background-color: #f0f0f040;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+

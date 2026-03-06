@@ -1,0 +1,52 @@
+.todo-item{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.todo-btn-container{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.todo-item-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.todo-btn-completed{
+  padding: 0.5rem;
+  border: 0;
+  background-color: #0ba500;
+  color: white;
+  cursor: pointer;
+  /* min-width: 20rem; */
+}
+
+.todo-btn-completed:hover{
+background-color: #0ba50080;
+  transition: background-color 0.3s ease;
+}
+
+.todo-btn-remove{
+  padding: 0.7rem;
+  border: 0;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  /* min-width: 20rem; */
+}
+
+.todo-btn-remove:hover{
+  background-color: #0056b3;
+  transition: background-color 0.3s ease;
+}
