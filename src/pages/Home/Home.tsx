@@ -1,11 +1,15 @@
-import { useState } from "react";
-import { useTodos } from "../../hooks/useTodos";
+import { useEffect, useState } from "react";
+import { useTodoStore } from "../../store/todosStore";
 import './styles.css';
 import { TodoList } from '../../components/ToDo/TodoList';
 
 export const Home = () => {
-  const { todos, addTodo, toggleTodo, deleteTodo } = useTodos();
+  const { todos, addTodo, toggleTodo, deleteTodo, loadTodos } = useTodoStore();
   const [todo, setTodo] = useState({ title: "", description: "" });
+
+  useEffect(() => {
+    loadTodos();
+  }, [loadTodos]);
 
   const token = localStorage.getItem('token');
 
@@ -15,7 +19,7 @@ export const Home = () => {
       return;
     }
     if (todo.title.trim() === "") return;
-    addTodo(todo.title, todo.description, token);
+    addTodo(todo.title, todo.description);
     setTodo({ title: "", description: "" });
   }
 

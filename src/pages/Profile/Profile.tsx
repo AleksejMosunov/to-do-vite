@@ -1,11 +1,15 @@
-import { useTodos } from '../../hooks/useTodos';
+import { useEffect } from 'react';
+import { useTodoStore } from '../../store/todosStore';
 import { TodoList } from '../../components/ToDo/TodoList';
 import './styles.css';
 
 
 export default function Profile() {
+  const { todos, toggleTodo, deleteTodo, loadTodos } = useTodoStore();
 
-  const { todos, toggleTodo, deleteTodo } = useTodos();
+  useEffect(() => {
+    loadTodos();
+  }, [loadTodos]);
 
   return (
     <div className="todo-list-profile">

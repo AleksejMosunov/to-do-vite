@@ -1,6 +1,6 @@
 .todo-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
   gap: 1rem;
 }
 
@@ -8,6 +8,10 @@
   background-color: #f0f0f040;
   border-radius: 1rem;
   padding: 1rem;
+  max-width: 300px;
+  max-height: 200px;
+  overflow: hidden;
+  display: flex;
 }
 
 .todo-list-archive {

@@ -11,12 +11,11 @@ type Props = {
 export const TodoItem = ({ todo, toggle, remove }: Props) => (
   <div className='todo-item'>
     <div className='todo-item-container'>
-      <div>
+      <div style={{ textAlign: 'center' }}>
         <span>ToDo name: </span>
         <span>{todo.title}</span>
       </div>
-      <div>
-        <span>ToDo description: </span>
+      <div style={{ textAlign: 'left' }}>
         <span>{todo.description}</span>
       </div>
     </div>
