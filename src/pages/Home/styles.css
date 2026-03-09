@@ -53,3 +53,35 @@
   gap: 10px;
   width: 100%
 }
+
+/* Адаптив для планшетов */
+@media (max-width: 900px) {
+  .add-todo {
+    width: 60%;
+  }
+
+  .add-input,
+  .add-input-description {
+    font-size: 14px;
+  }
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 600px) {
+  .add-todo {
+    width: 90%;
+  }
+
+  .add-input {
+    min-height: 2.5rem;
+  }
+
+  .add-input-description {
+    min-height: 5rem;
+  }
+
+  .add-todo-btn {
+    padding: 0.75rem;
+    font-size: 16px;
+  }
+}

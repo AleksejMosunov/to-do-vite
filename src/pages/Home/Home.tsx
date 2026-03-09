@@ -50,7 +50,6 @@ export const Home = () => {
       {/* Right Side */}
       <div className="todo-list-home">
         <h1>My Last Added 3 ToDo</h1>
-
         <TodoList
           todos={todos}
           toggle={toggleTodo}

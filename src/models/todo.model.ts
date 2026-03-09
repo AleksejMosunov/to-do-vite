@@ -9,4 +9,6 @@ export type Todo = CreateTodo & {
   _id: string;
   completed: boolean;
   status: string;
+  createdAt?: string;
+  updatedAt?: string;
 };

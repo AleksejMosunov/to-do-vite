@@ -1,14 +1,13 @@
 .todo-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
   gap: 1rem;
+    grid-template-columns: repeat(var(--cols), minmax(200px, 1fr));
 }
 
 .todo-wrapper{
   background-color: #f0f0f040;
   border-radius: 1rem;
   padding: 1rem;
-  max-width: 300px;
   max-height: 200px;
   overflow: hidden;
   display: flex;
@@ -16,27 +15,43 @@
 
 .todo-list-archive {
   display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-columns: repeat(var(--cols), minmax(200px, 1fr));
   gap: 1rem;
 }
 
-
-/* На экранах меньше 900px — 2 колонки */
+/* Адаптив для планшетов */
 @media (max-width: 900px) {
   .todo-list {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    grid-template-columns: repeat(var(--cols), 1fr);
   }
-   .todo-list-archive {
-    grid-template-columns: repeat(1, 1fr);
+
+  .todo-list-archive {
+    grid-template-columns: repeat(var(--cols), 1fr);
+    gap: 0.75rem;
+  }
+
+  .todo-wrapper {
+    max-width: 100%;
+    padding: 0.75rem;
   }
 }
 
-/* На экранах меньше 600px — 1 колонка */
+/* Адаптив для мобильных */
 @media (max-width: 600px) {
   .todo-list {
-    grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
-   .todo-list-archive {
-    grid-template-columns: repeat(1, 1fr);
+
+  .todo-list-archive {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .todo-wrapper {
+    max-width: 100%;
+    max-height: 250px;
+    padding: 0.75rem;
   }
 }
+
