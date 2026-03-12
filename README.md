@@ -1,114 +1,102 @@
+# To-Do Vite App
 
+A task management Single Page Application built with React, TypeScript, Vite, React Router, and Zustand.
 
-📝 To Do # React + TypeScript + Vite
+The app includes authentication, protected routes, and CRUD operations for todos through a backend API.
 
-🚀 Tech Stack
+## Main Features
 
-React, TypeScript, Vite, JavaScript, React Hooks, LocalStorage, CSS / SCSS
+- Login with backend token and token storage in `localStorage`
+- Protected pages (`/` and `/profile`) via route guard
+- Create new todos (title + description)
+- Toggle todo completion
+- Delete todos
+- Split todo lists by state (active/archive behavior in list component)
+- Responsive app layout with shared header/footer
 
-🎯 Features
+## Tech Stack
 
-➕ Add new tasks
+- React 19
+- TypeScript
+- Vite
+- React Router DOM
+- Zustand
+- ESLint
 
-✏️ Edit tasks (in procces)
+## Prerequisites
 
-✅ Mark tasks as completed
+- Node.js 18+ (recommended: latest LTS)
+- npm 9+
+- Running backend API
 
-❌ Delete tasks
+## Environment Variables
 
-🔎 Filter tasks (All / Active / Completed) (in procces)
+Create or update environment files in the project root:
 
-💾 Persistent state with LocalStorage
+`.env.development`
 
-⚡ Fast development environment powered by Vite
-
-🧩 Modular and scalable component structure
-
-
-🎓 Learning Goals
-
-Improve understanding of React architecture
-
-Practice TypeScript in real UI scenarios
-
-Learn how to structure scalable frontend applications
-
-Work with persistent client-side storage
-
-______________________________________________________________________________________________________________________________________
-
-to-do-vite is a modern Single Page Application (SPA) for task management built with React and TypeScript using Vite as a build tool.
-
-The project was created for learning purposes to practice component architecture, state management, hooks, and clean TypeScript typing in a real-world frontend setup.
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```env
+VITE_BACK_URL=http://localhost:3000
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+`.env.production`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```env
+VITE_BACK_URL=https://your-api-url
 ```
+
+The frontend expects:
+
+- `POST {VITE_BACK_URL}/auth/login`
+- `GET {VITE_BACK_URL}/todos`
+- `POST {VITE_BACK_URL}/todos`
+- `DELETE {VITE_BACK_URL}/todos/:id`
+- `PATCH {VITE_BACK_URL}/todos/:id/toggle`
+
+## Getting Started
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start development server:
+
+```bash
+npm run dev
+```
+
+3. Open app in browser:
+
+```text
+http://localhost:5173
+```
+
+## Available Scripts
+
+- `npm run dev` - start Vite dev server
+- `npm run build` - type-check and build production bundle
+- `npm run preview` - preview production build locally
+- `npm run lint` - run ESLint
+
+## App Routes
+
+- `/` - Home page (protected)
+- `/login` - Login page
+- `/about` - About page
+- `/register` - Register page (currently placeholder)
+- `/profile` - Profile page (protected)
+
+## Project Structure
+
+- `src/pages` - route pages
+- `src/components` - reusable UI and app components
+- `src/store` - Zustand store
+- `src/services` - API communication layer
+- `src/models` - TypeScript models/types
+
+## Notes
+
+- If no token is available, protected routes redirect to login.
+- The app currently relies on backend availability for todo data.
